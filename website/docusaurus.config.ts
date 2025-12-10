@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This config runs in Node.js (not in the browser)
@@ -8,20 +8,19 @@ const config: Config = {
   tagline: 'A comprehensive guide to building intelligent physical systems',
   favicon: 'img/favicon.ico',
 
-  // Future flags for Docusaurus v4 compatibility
   future: {
     v4: true,
   },
 
-  // GitHub Pages deployment config
-  url: 'https://github.com/muskansirajkhan', // your GitHub Pages URL
-  baseUrl: '/website/',                  // repo name
-  organizationName: 'Muskan Siraj',     // GitHub username
-  projectName: 'website',                // repo name
+  // ✅ GitHub Pages deployment config (FIXED)
+  url: 'https://muskansirajkhan.github.io',
+  baseUrl: '/-Hackathon-Physical-AI-Humanoid-Robotics-/',
 
-  onBrokenLinks: 'throw', // fail on broken links
+  organizationName: 'muskansirajkhan',
+  projectName: '-Hackathon-Physical-AI-Humanoid-Robotics-',
 
-  // Internationalization
+  onBrokenLinks: 'throw',
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'ur'],
@@ -39,14 +38,16 @@ const config: Config = {
     },
   },
 
-  // Presets
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/muskansirajkhan/website/tree/main/', 
+
+          // ✅ FIXED edit URL
+          editUrl:
+            'https://github.com/muskansirajkhan/-Hackathon-Physical-AI-Humanoid-Robotics-/tree/main/website/',
         },
         blog: false,
         theme: {
@@ -56,12 +57,13 @@ const config: Config = {
     ],
   ],
 
-  // Theme configuration
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+
     colorMode: {
       respectPrefersColorScheme: true,
     },
+
     navbar: {
       title: 'Physical AI Textbook',
       logo: {
@@ -76,12 +78,13 @@ const config: Config = {
           label: 'Chapters',
         },
         {
-          href: 'https://github.com/muskansirajkhan', 
+          href: 'https://github.com/muskansirajkhan',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
@@ -120,13 +123,14 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/muskansirajkhan', 
+              href: 'https://github.com/muskansirajkhan',
             },
           ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Muskan Siraj Khan.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
@@ -136,4 +140,5 @@ const config: Config = {
 };
 
 export default config;
+
 
